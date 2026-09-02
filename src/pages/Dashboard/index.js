@@ -1,6 +1,5 @@
-import React from 'react'
 
-function dashboard() {
+function Dashboard() {
   return (
     <div>
       <h1>Welcome to Money World</h1>
@@ -8,4 +7,4 @@ function dashboard() {
   )
 }
 
-export default dashboard
+export default Dashboard
