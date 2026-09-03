@@ -1,23 +1,26 @@
 import Button from "@mui/material/Button";
-import * as React from "react";
 import { CiLight, CiMail, CiShoppingCart } from "react-icons/ci";
 import { FaRegBell } from "react-icons/fa6";
 import { MdMenuOpen } from "react-icons/md";
 
 import Logout from "@mui/icons-material/Logout";
 import PersonAdd from "@mui/icons-material/PersonAdd";
+import { Divider } from '@mui/material';
 import ListItemIcon from "@mui/material/ListItemIcon";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import { useState } from 'react';
 import { FaShieldHalved } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import logo from "../../assets/imgs/logo.png";
 import SearchBox from "../Search";
 
 function Index() {
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [isOpennotificationMenuDrop, setisOpennotificationMenuDrop] = useState(null);
 
-  const open = Boolean(anchorEl);
+  const openMyAcc = Boolean(anchorEl);
+  const openNotification = Boolean(isOpennotificationMenuDrop);
 
   const handleOpenMyAccDrop = (event) => {
     setAnchorEl(event.currentTarget);
@@ -26,6 +29,13 @@ function Index() {
   const handleCloseMyAccDrop = () => {
     setAnchorEl(null);
   };
+
+  const handleOpennotificationMenuDrop = (event) => {
+    setisOpennotificationMenuDrop(event.currentTarget);
+  }
+  const handleClosenotificationMenuDrop = () => {
+    setisOpennotificationMenuDrop(null);
+  }
 
   return (
     <>
@@ -55,17 +65,86 @@ function Index() {
 
               <Button
                 className="rounded-circle me-3"
-                onClick={handleOpenMyAccDrop}
+                 
               >
                 <CiShoppingCart />
               </Button>
               <Button className="rounded-circle me-3">
                 <CiMail />
               </Button>
-              <Button className="rounded-circle me-3">
+             
+              <div className="dropdownWrapper position-relative">
+                 <Button className="rounded-circle me-3" onClick={handleOpennotificationMenuDrop}>
                 <FaRegBell />
               </Button>
-
+              {/* Notification  Bell Start*/}
+                 <Menu
+                anchorEl={isOpennotificationMenuDrop}
+                className='notificationMenu dropdown_list'
+                id="notificationMenu"
+                open={openNotification}
+                onClose={handleClosenotificationMenuDrop}
+                onClick={handleClosenotificationMenuDrop}
+                slotProps={{
+                  paper: {
+                    elevation: 0,
+                    sx: {
+                      overflow: "visible",
+                      filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
+                      mt: 1.5,
+                      "& .MuiAvatar-root": {
+                        width: 32,
+                        height: 32,
+                        ml: -0.5,
+                        mr: 1,
+                      },
+                      "&::before": {
+                        content: '""',
+                        display: "block",
+                        position: "absolute",
+                        top: 0,
+                        right: 14,
+                        width: 10,
+                        height: 10,
+                        bgcolor: "background.paper",
+                        transform: "translateY(-50%) rotate(45deg)",
+                        zIndex: 0,
+                      },
+                    },
+                  },
+                }}
+                transformOrigin={{ horizontal: "right", vertical: "top" }}
+                anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
+                >
+                   
+                    <h4 className='ps-2 pb-0'>Notifications-(12)</h4>
+                   <Divider className='mb-1' />
+                   
+                  <MenuItem onClick={handleCloseMyAccDrop}>
+                    <div className="d-flex align-items-center  " >
+                       <div className="userImg">
+                          <span className="rounded-circle">
+                              <img src="https://mironcoder-hotash-react.netlify.app/images/avatar/01.webp" alt="img" />
+                          </span>
+                      </div>
+                      <div className='dropdownInfo'>
+                      <h4>
+                        <span>
+                            <b>Mahmudu </b>
+                              added to his favorite list
+                          <b> Leather belt steve madden</b>
+                        </span>
+                        </h4>
+                        <p className="text-sky mb-0">few seconds ago</p>
+                      </div>
+                    </div>
+                  </MenuItem>
+ 
+              </Menu>
+              {/* Notification  Bell Ends*/}
+              
+              </div>
+              
               <Button
                 className="myAcc d-flex align-items-center"
                 onClick={handleOpenMyAccDrop}
@@ -86,7 +165,7 @@ function Index() {
               <Menu
                 anchorEl={anchorEl}
                 id="account-menu"
-                open={open}
+                open={openMyAcc}
                 onClose={handleCloseMyAccDrop}
                 onClick={handleCloseMyAccDrop}
                 slotProps={{
