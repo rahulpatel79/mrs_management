@@ -116,11 +116,12 @@ function Index() {
                 transformOrigin={{ horizontal: "right", vertical: "top" }}
                 anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
                 >
-                   
-                    <h4 className='ps-2 pb-0'>Notifications-(12)</h4>
-                   <Divider className='mb-1' />
-                   
-                  <MenuItem onClick={handleCloseMyAccDrop}>
+                    <div className="head">
+                      <h4 className='ps-2 pb-0'>Notifications-(12)</h4>
+                    </div>
+                   <Divider className=' ' />
+                  <div className="scroll mt-1">
+                    <MenuItem onClick={handleCloseMyAccDrop} className='menuListItem'>
                     <div className="d-flex align-items-center  " >
                        <div className="userImg">
                           <span className="rounded-circle">
@@ -130,15 +131,116 @@ function Index() {
                       <div className='dropdownInfo'>
                       <h4>
                         <span>
-                            <b>Mahmudu </b>
+                            <b>Rahul Patel </b>
                               added to his favorite list
                           <b> Leather belt steve madden</b>
                         </span>
                         </h4>
-                        <p className="text-sky mb-0">few seconds ago</p>
+                        <p className="text-sky mb-0 ">few seconds ago</p>
                       </div>
                     </div>
                   </MenuItem>
+                  <MenuItem onClick={handleCloseMyAccDrop} className='menuListItem'>
+                    <div className="d-flex align-items-center  " >
+                       <div className="userImg">
+                          <span className="rounded-circle">
+                              <img src="https://mironcoder-hotash-react.netlify.app/images/avatar/01.webp" alt="img" />
+                          </span>
+                      </div>
+                      <div className='dropdownInfo'>
+                      <h4>
+                        <span>
+                            <b>Rahul Patel </b>
+                              added to his favorite list
+                          <b> Leather belt steve madden</b>
+                        </span>
+                        </h4>
+                        <p className="text-sky mb-0 ">few seconds ago</p>
+                      </div>
+                    </div>
+                  </MenuItem>
+                  <MenuItem onClick={handleCloseMyAccDrop} className='menuListItem'>
+                    <div className="d-flex align-items-center  " >
+                       <div className="userImg">
+                          <span className="rounded-circle">
+                              <img src="https://mironcoder-hotash-react.netlify.app/images/avatar/01.webp" alt="img" />
+                          </span>
+                      </div>
+                      <div className='dropdownInfo'>
+                      <h4>
+                        <span>
+                            <b>Rahul Patel </b>
+                              added to his favorite list
+                          <b> Leather belt steve madden</b>
+                        </span>
+                        </h4>
+                        <p className="text-sky mb-0 ">few seconds ago</p>
+                      </div>
+                    </div>
+                  </MenuItem>
+                  <MenuItem onClick={handleCloseMyAccDrop} className='menuListItem'>
+                    <div className="d-flex align-items-center  " >
+                       <div className="userImg">
+                          <span className="rounded-circle">
+                              <img src="https://mironcoder-hotash-react.netlify.app/images/avatar/01.webp" alt="img" />
+                          </span>
+                      </div>
+                      <div className='dropdownInfo'>
+                      <h4>
+                        <span>
+                            <b>Rahul Patel </b>
+                              added to his favorite list
+                          <b> Leather belt steve madden</b>
+                        </span>
+                        </h4>
+                        <p className="text-sky mb-0 ">few seconds ago</p>
+                      </div>
+                    </div>
+                  </MenuItem>
+                  <MenuItem onClick={handleCloseMyAccDrop} className='menuListItem'>
+                    <div className="d-flex align-items-center  " >
+                       <div className="userImg">
+                          <span className="rounded-circle">
+                              <img src="https://mironcoder-hotash-react.netlify.app/images/avatar/01.webp" alt="img" />
+                          </span>
+                      </div>
+                      <div className='dropdownInfo'>
+                      <h4>
+                        <span>
+                            <b>Rahul Patel </b>
+                              added to his favorite list
+                          <b> Leather belt steve madden</b>
+                        </span>
+                        </h4>
+                        <p className="text-sky mb-0 ">few seconds ago</p>
+                      </div>
+                    </div>
+                  </MenuItem>
+                  <MenuItem onClick={handleCloseMyAccDrop} className='menuListItem'>
+                    <div className="d-flex align-items-center  " >
+                       <div className="userImg">
+                          <span className="rounded-circle">
+                              <img src="https://mironcoder-hotash-react.netlify.app/images/avatar/01.webp" alt="img" />
+                          </span>
+                      </div>
+                      <div className='dropdownInfo'>
+                      <h4>
+                        <span>
+                            <b>Rahul Patel </b>
+                              added to his favorite list
+                          <b> Leather belt steve madden</b>
+                        </span>
+                        </h4>
+                        <p className="text-sky mb-0 ">few seconds ago</p>
+                      </div>
+                    </div>
+                  </MenuItem>
+                  </div>
+                  <div className="pt-2 px-2 pb-0 w-100">
+                  <button className="btn-blue w-100">View all notifications </button>
+                  </div>
+                   
+                   
  
               </Menu>
               {/* Notification  Bell Ends*/}
