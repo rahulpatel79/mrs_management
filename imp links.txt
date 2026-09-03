@@ -1,0 +1,157 @@
+figma link -------------------
+https://www.figma.com/design/WadcoP3CSejUDj7YZc87xj/-Preview--Minimal-Web.v7.3.0?node-id=0-1&p=f
+-----------------------------
+
+how to make Admin Pannel link ---------------
+https://marmelab.com/react-admin/Tutorial.html
+-------------------------
+
+---------MRS Manage problem------------
+mujhe project - mobile shop management he 
+udhari riminder ya management keh skte he usko 
+custmer detail - name, father name mobile number  customer mobile problem etc.
+assesiries manage- 
+stock riminder alert
+mobile kitne reiparing me kitne he priority kisko dena he ab 
+ye project mujhe banna front-end with backend in local system with session 
+------------------------------------------
+
+mobile-shop-management/
+│
+├── frontend/
+│   │
+│   ├── public/
+│   │
+│   ├── src/
+│   │   │
+│   │   ├── assets/
+│   │   │
+│   │   ├── components/
+│   │   │   ├── Button/
+│   │   │   ├── Modal/
+│   │   │   ├── Table/
+│   │   │   ├── Input/
+│   │   │   └── Loader/
+│   │   │
+│   │   ├── layouts/
+│   │   │   ├── MainLayout.jsx
+│   │   │   └── AuthLayout.jsx
+│   │   │
+│   │   ├── pages/
+│   │   │   │
+│   │   │   ├── Login/
+│   │   │   │   └── Login.jsx
+│   │   │   │
+│   │   │   ├── Dashboard/
+│   │   │   │   └── Dashboard.jsx
+│   │   │   │
+│   │   │   ├── Customers/
+│   │   │   │   ├── CustomerList.jsx
+│   │   │   │   ├── CustomerForm.jsx
+│   │   │   │   └── CustomerDetails.jsx
+│   │   │   │
+│   │   │   ├── Repairs/
+│   │   │   │   ├── RepairList.jsx
+│   │   │   │   ├── RepairForm.jsx
+│   │   │   │   └── RepairDetails.jsx
+│   │   │   │
+│   │   │   ├── Accessories/
+│   │   │   │   ├── ProductList.jsx
+│   │   │   │   ├── ProductForm.jsx
+│   │   │   │   └── Stock.jsx
+│   │   │   │
+│   │   │   ├── Udhar/
+│   │   │   │   ├── UdharList.jsx
+│   │   │   │   ├── Payment.jsx
+│   │   │   │   └── Reminder.jsx
+│   │   │   │
+│   │   │   ├── Reports/
+│   │   │   │   ├── SalesReport.jsx
+│   │   │   │   ├── RepairReport.jsx
+│   │   │   │   ├── StockReport.jsx
+│   │   │   │   └── UdharReport.jsx
+│   │   │   │
+│   │   │   └── Settings/
+│   │   │       └── Settings.jsx
+│   │   │
+│   │   ├── services/
+│   │   │   ├── api.js
+│   │   │   ├── auth.js
+│   │   │   ├── customerApi.js
+│   │   │   ├── repairApi.js
+│   │   │   ├── productApi.js
+│   │   │   └── udharApi.js
+│   │   │
+│   │   ├── hooks/
+│   │   ├── context/
+│   │   │   └── AuthContext.jsx
+│   │   │
+│   │   ├── utils/
+│   │   ├── routes/
+│   │   │   └── AppRoutes.jsx
+│   │   │
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   │
+│   └── package.json
+│
+├── backend/
+│   │
+│   ├── app/
+│   │   ├── main.py
+│   │   │
+│   │   ├── config/
+│   │   │   └── settings.py
+│   │   │
+│   │   ├── database/
+│   │   │   ├── connection.py
+│   │   │   └── base.py
+│   │   │
+│   │   ├── models/
+│   │   │   ├── user.py
+│   │   │   ├── customer.py
+│   │   │   ├── repair.py
+│   │   │   ├── product.py
+│   │   │   ├── sale.py
+│   │   │   ├── payment.py
+│   │   │   └── reminder.py
+│   │   │
+│   │   ├── schemas/
+│   │   │   ├── user.py
+│   │   │   ├── customer.py
+│   │   │   ├── repair.py
+│   │   │   ├── product.py
+│   │   │   └── payment.py
+│   │   │
+│   │   ├── routers/
+│   │   │   ├── auth.py
+│   │   │   ├── customers.py
+│   │   │   ├── repairs.py
+│   │   │   ├── products.py
+│   │   │   ├── payments.py
+│   │   │   ├── reminders.py
+│   │   │   └── reports.py
+│   │   │
+│   │   ├── services/
+│   │   │   ├── customer_service.py
+│   │   │   ├── repair_service.py
+│   │   │   ├── stock_service.py
+│   │   │   ├── udhar_service.py
+│   │   │   └── report_service.py
+│   │   │
+│   │   └── auth/
+│   │       ├── security.py
+│   │       └── dependencies.py
+│   │
+│   ├── tests/
+│   ├── requirements.txt
+│   └── .env
+│
+├── database/
+│   ├── migrations/
+│   └── backups/
+│
+├── docs/
+│   └── database-design.md
+│
+└── README.md
