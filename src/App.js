@@ -16,10 +16,10 @@ function App() {
           <Sidebar />
         </div>
         <div className="content">
-         <Routes>
-        <Route path='/' exact={true} element={<Dashboard />} />
-        <Route path='/dashboard' exact={true} element={<Dashboard />} />
-      </Routes>
+            <Routes>
+                <Route path='/' exact={true} element={<Dashboard />} />
+                <Route path='/dashboard' exact={true} element={<Dashboard />} />
+            </Routes>
         </div>
       </div>
       
