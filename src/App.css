@@ -18,11 +18,13 @@ body {
 header {
   width: 100%;
   height: 70px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.7);
   position: fixed;
   top: 0px;
   left: 0px;
   z-index: 1000;
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(5px);
 }
 
 header .logo {
@@ -457,6 +459,48 @@ transition: all 0.3s ease-in-out;
 .cardFilters .col-md-3 h4{font-size: 14px; font-weight:700; text-transform: capitalize; color: #403e57; }
 .table .thead-dark th{background: #1866ee !important; color: white; border-color: rgba(255, 255, 255, 0.1) !important; font-size: 15px; text-transform: capitalize;}
 
-.table tbody td{font-size: 13px !important; color: #403e57;}
-.table tbody .actions button{min-width: 30px !important; width: 30px !important; height: 30px !important;}
-.table tbody .actions button svg{font-size: 30px !important;}
+.table .thead-dark .thProduct{
+ width: 100px;
+}
+
+table tbody tr{
+height: 30px; }
+
+.table tbody td{font-size: 13px !important; color: #403e57; padding: 0px 8px !important;}
+.table tbody .actions button{min-width: 32px !important; width: 32px !important; height: 32px !important; margin:5px 3px;}
+.table tbody .actions button.secondary{background-color: rgba(203, 60, 231, 0.3) !important;}
+.table tbody .actions button.success{background-color: rgba(26, 159, 083, 0.3) !important;}
+.table tbody .actions button.error{background-color: rgba(241, 17, 51, 0.3) !important;}
+
+.table tbody .actions button svg{font-size: 32px !important;}
+
+table.v-align td{vertical-align: middle;}
+
+.imgWrapper{ width: 20%; flex: 0 0 20%; }
+.info{width: 80%; flex: 0 0 20%;}
+
+table td .info h6{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+table td .info p{
+  font-size: 13px;
+  line-height: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  opacity: 0.8;
+  margin: 0px;
+}
+.productBox{ width: 250px;}
+
+.userImgWrapper{
+  width: 40px;
+  height: 40px;
+}
+.tableFooter{padding-bottom: 20px;}
+.tableFooter .pagination{margin-left: auto;}
