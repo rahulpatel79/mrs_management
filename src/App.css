@@ -8,7 +8,7 @@
 
 body {
   font-family: "Open Sans", sans-serif !important;
-  background: #e8d5d5;
+  background: #e8d5d5; overflow-x: hidden;
 }
 
 ::-webkit-scrollbar{width: 5px; height: 5px;}
@@ -171,7 +171,11 @@ flex: 0 0 20%;
 transition: all 0.3s ease-in-out;
  
 }
-.main .sidebarWrapper .sidebar{top: 70px;left: 0px;width: 20%;height: 100vh; max-height: calc(100%-70px); position: fixed;background: #fff; overflow-y: scroll; overflow-x: hidden; padding-bottom: 150px;}
+.main .sidebarWrapper.toggle{width:0%; flex: 0 0 0%;} /*sidebar toggle Css*/
+
+.main .sidebarWrapper .sidebar{top: 70px;left: 0px;width: 20%;height: 100vh; max-height: calc(100%-70px); position: fixed;background: #fff; overflow-y: scroll; overflow-x: hidden; padding-bottom: 150px; transition: all 0.3s ease-in-out;}
+
+.main .sidebarWrapper.toggle .sidebar {left: -100%;} /*sidebar toggle Css*/
 
 .main .sidebarWrapper .sidebar::-webkit-scrollbar{width: 3px !important;}
 .main .sidebarWrapper .sidebar::-webkit-scrollbar-thumb{background:transparent !important;}
@@ -188,7 +192,6 @@ transition: all 0.3s ease-in-out;
 .main .sidebarWrapper .sidebar ul li button .arrow{margin-left: auto; display: flex; align-items: center; justify-content: center; width: 25px; height: 25px;} 
 .main .sidebarWrapper .sidebar ul li button .dashArrow{margin-left: auto; display: flex; align-items: center; justify-content: center; width: 25px; height: 25px; 
 }
-
 
 
 .main .sidebarWrapper .sidebar ul li button:hover{background: #f1f1f1 !important;}
@@ -293,9 +296,10 @@ transition: all 0.3s ease-in-out;
  
  
 
- .content{  width: 80%;  flex: 0 0 80%; }
+ .main .content{  width: 80%;  flex: 0 0 80%; transition: all 0.3 ease-in-out ;}
+  .main .content.toggle{  width: 100%;  flex: 0 0 100%;}
 
- .right-content{padding: 100px 20px;}
+ .right-content{padding: 100px 20px; padding-bottom: 10px;}
  .dashboardBoxWrapper{gap: 21px; width: 100%; flex-wrap: wrap; }
 
  .dashboardBoxWrapper .dashboardBox{width: 48%; height: 220px; border-radius: 10px; overflow: hidden; padding: 20px;display: flex; flex-direction: column; justify-content: space-around; text-align: left !important; position: relative; color: #fff; cursor: pointer; text-transform: capitalize; font-weight: 600;}
@@ -457,6 +461,9 @@ transition: all 0.3s ease-in-out;
 .card .hd{font-size: 18px; font-weight: 600; color: #403e57;}
  
 .cardFilters .col-md-3 h4{font-size: 14px; font-weight:700; text-transform: capitalize; color: #403e57; }
+
+.table-responsive::-webkit-scrollbar-thumb{background: #ccc;}
+
 .table .thead-dark th{background: #1866ee !important; color: white; border-color: rgba(255, 255, 255, 0.1) !important; font-size: 15px; text-transform: capitalize;}
 
 .table .thead-dark .thProduct{
@@ -504,3 +511,5 @@ table td .info p{
 }
 .tableFooter{padding-bottom: 20px;}
 .tableFooter .pagination{margin-left: auto;}
+
+

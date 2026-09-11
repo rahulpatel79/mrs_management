@@ -13,9 +13,11 @@ import { Link } from 'react-router-dom';
 
 
 
-const Sidebar = () => {
+const Sidebar= () => {
 
-const [activeTab, setActiveTab] = useState(0);
+  const [activeTab, setActiveTab] = useState(0);
+  
+  // const context = useContext(MyContext);
 
 const isOpenSubmenu = (index) => {
     setActiveTab(activeTab === index ? null : index);

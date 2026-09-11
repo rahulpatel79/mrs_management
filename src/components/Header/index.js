@@ -1,7 +1,7 @@
 import Button from "@mui/material/Button";
 import { CiLight, CiMail, CiShoppingCart } from "react-icons/ci";
 import { FaRegBell } from "react-icons/fa6";
-import { MdMenuOpen } from "react-icons/md";
+import { MdMenuOpen, MdOutlineMenu } from "react-icons/md";
 
 import Logout from "@mui/icons-material/Logout";
 import PersonAdd from "@mui/icons-material/PersonAdd";
@@ -9,9 +9,10 @@ import { Divider } from '@mui/material';
 import ListItemIcon from "@mui/material/ListItemIcon";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { FaShieldHalved } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { MyContext } from '../../App';
 import logo from "../../assets/imgs/logo.png";
 import SearchBox from "../Search";
 
@@ -21,6 +22,8 @@ function Index() {
 
   const openMyAcc = Boolean(anchorEl);
   const openNotification = Boolean(isOpennotificationMenuDrop);
+
+  const context = useContext(MyContext)
 
   const handleOpenMyAccDrop = (event) => {
     setAnchorEl(event.currentTarget);
@@ -52,8 +55,12 @@ function Index() {
             </div>
 
             <div className="col-sm-3 d-flex align-items-center part2 pl-4">
-              <Button className="rounded-circle me-3">
-                <MdMenuOpen />
+              <Button className="rounded-circle me-3" onClick={()=>context.setIsToggleSidebar(!context.isToggleSidebar)
+                
+              }>
+                { 
+                  context.isToggleSidebar ===false ? <MdMenuOpen /> : <MdOutlineMenu/>
+                }
               </Button>
               <SearchBox />
             </div>
