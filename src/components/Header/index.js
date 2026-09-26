@@ -22,6 +22,7 @@ function Index() {
 
   const openMyAcc = Boolean(anchorEl);
   const openNotification = Boolean(isOpennotificationMenuDrop);
+ 
 
   const context = useContext(MyContext)
 
@@ -246,24 +247,21 @@ function Index() {
                   <div className="pt-2 px-2 pb-0 w-100">
                   <button className="btn-blue w-100">View all notifications </button>
                   </div>
-                   
-                   
  
               </Menu>
               {/* Notification  Bell Ends*/}
-              
+                
               </div>
-              
-              <Button
-                className="myAcc d-flex align-items-center"
-                onClick={handleOpenMyAccDrop}
-              >
+              {context.isLogin!== true ? <Link to={'/login'}><button className='btn-blue'>Sing In</button></Link> : 
+              <div className="myAccWrapper">
+
+              <Button className="myAcc d-flex align-items-center" onClick={handleOpenMyAccDrop} >
                 <div className="userImg">
                   <span className="rounded-circle">
                     <img
                       src="https://mironcoder-hotash-react.netlify.app/images/avatar/01.webp"
                       alt="img"
-                    />
+                      />
                   </span>
                 </div>
                 <div className="userInfo">
@@ -308,6 +306,9 @@ function Index() {
                 transformOrigin={{ horizontal: "right", vertical: "top" }}
                 anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
               >
+
+               
+
                 <MenuItem onClick={handleCloseMyAccDrop}>
                   <ListItemIcon>
                     <PersonAdd fontSize="small" />
@@ -328,6 +329,10 @@ function Index() {
                   Logout
                 </MenuItem>
               </Menu>
+          </div>
+              }
+               
+              
             </div>
           </div>
         </div>
