@@ -86,6 +86,8 @@ header button.rounded-circle:hover svg{color: #0858f7 !important; }
   color: #292929;
 }
 
+h1,h2,h3,h4,h5,h6,p{color: #403e57 !important;}
+
 .myAcc{text-align: left !important; text-transform: capitalize !important; color: #0858f7;}
   .userImg {display: flex; align-items: center; justify-content: center; overflow: hidden; width: 40px; height: 40px; border: 1px solid #0858f7; padding: 3px; border-radius: 100%;}
 
@@ -512,14 +514,30 @@ table td .info p{
   width: 40px;
   height: 40px;
 }
+.link{color: #5e5d72; text-decoration: none; padding-top: 20px;}
+.link:hover{color: #0858f7 !important; text-decoration: none;}
+
+.link.color{color: #0858f7 !important; text-decoration: none;}
+
+.btn-blue{
+  width: 100% !important;
+    background: #0858f7 !important;
+    color: #fff!important ;
+    font-weight: 600 !important;
+    border-radius: 35px !important;
+    text-transform: capitalize !important;
+}
+.btn-lg{padding: 5px 25px !important;}
+.btn-big{padding: 8px 25px !important;}
+
 .tableFooter{padding-bottom: 20px;}
 .tableFooter .pagination{margin-left: auto;}
 
 .loginSection{width: 100%; height: 100vh; padding: 100vh; padding: 35px 25px; background: #fff; position: relative;}
-.loginBgImg{width: 100%; height: 100%; opacity: 0.08; position: fixed; top: 0px; left: 0px; z-index:99; pointer-events: none;}
+.loginBgImg{width: 100%; height: 100%; opacity: 0.09; position: fixed; top: 0px; left: 0px; z-index:99; pointer-events: none;}
 
 .loginSection .loginBox{width: 400px; height: auto; margin: auto;}
-.loginSection .loginBox .wrapper{width: 100%; height: 300px; background: #f0f0f0; position: relative; z-index: 100; padding: 35px 45px; }
+.loginSection .loginBox .wrapper{width: 100%; height: auto !important; background: #f0f0f0; position: relative; z-index: 100; padding: 35px 45px; }
 
 .loginSection .loginBox .wrapper .form-control{background: #ffff !important; box-shadow: none !important; outline: none !important; border-radius: 6px; font-size: 14px; font-weight: 600; height: 45px; padding-left: 40px;}
 .loginSection .loginBox .wrapper .form-group.focus .icon svg{color: #0858f7 !important;}
@@ -527,3 +545,19 @@ table td .info p{
 
 .loginSection .loginBox .wrapper .form-group .icon{position: absolute; top: 3px; left: 10px; z-index: 100; font-size: 23px;}
 .loginSection .loginBox .wrapper .form-group .icon svg{color: #5e5d72 !important; }
+
+.toggleShowPassword{position: absolute; top: 8px; right: 8px;}
+.toggleShowPassword svg{font-size: 22px;}
+.loginSection .loginBox .wrapper .link{font-size: 15px;}
+.loginSection .loginBox .wrapper .or span.line{display: block; width: 35%; height: 1px; background: rgba(0, 0, 0, 0.4);}
+.loginSection .loginBox .wrapper .or span.txt{display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 600; width:50px; height: 50px ; border: 1px solid rgba(0, 0, 0, 0.2); border-radius: 50%;}
+
+
+.loginWithGoogle{text-transform: capitalize !important; font-weight: bold;}
+.signUpSection {background:#f1f1f1 !important; padding: 0px;}
+.signUpSection .loginBox{background:#e4e4e4 !important; position: relative;z-index: 100; width: 100% !important; padding: 25px 25px; height: auto; }
+.signUpSection .loginBox .wrapper{border: 0px !important; background: transparent !important; padding-top: 0px !important;  }
+
+.signUpSection .part1{padding-left: 110px; padding-right: 110px;}
+.signUpSection .part1 h1{font-size: 80px; font-weight: 800;}
+.signUpSection .part1 p{font-size: 18px; font-weight: 500;}

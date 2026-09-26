@@ -6,12 +6,19 @@ import { IoMdTimer } from "react-icons/io";
 
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import { useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { MyContext } from '../../../App';
 
 const DashboardBox = (props) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const ITEM_HEIGHT = 48;
+
+  const context = useContext(MyContext);
+  useEffect(() => {
+    context.setIsHideSidebarAndHeader(false);
+   },[context])
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
