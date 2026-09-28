@@ -18,6 +18,7 @@ const Login = () => {
 
   useEffect(() => {
     context.setIsHideSidebarAndHeader(true);
+     window.scrollTo(0, 0);
   })
   const focusInput = (index) => {
     setInputIndex(index);
@@ -37,7 +38,7 @@ const Login = () => {
 
               <div className={`form-group mb-3 position-relative ${inputIndex===0 && 'focus'}`}>
                 <span className='icon'><MdEmail/> </span>
-                <input type="text" className='form-control' placeholder='enter your email.' onFocus={()=>focusInput(0)} onBlur={()=>setInputIndex=>(null)} />
+                <input type="text" className='form-control' placeholder='enter your email.' onFocus={()=>focusInput(0)} onBlur={()=>setInputIndex=>(null)} autoFocus />
               </div>
               <div className={`form-group mb-3 position-relative ${inputIndex===1 && 'focus'}`}>
                 <span className='icon'><RiLockPasswordFill /> </span>

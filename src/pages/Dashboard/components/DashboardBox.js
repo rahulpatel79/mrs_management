@@ -6,18 +6,14 @@ import { IoMdTimer } from "react-icons/io";
 
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import { useContext, useEffect, useState } from 'react';
-import { MyContext } from '../../../App';
+import { useState } from 'react';
 
 const DashboardBox = (props) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const ITEM_HEIGHT = 48;
 
-  const context = useContext(MyContext);
-  useEffect(() => {
-    context.setIsHideSidebarAndHeader(false);
-   },[context])
+
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -31,8 +27,7 @@ const DashboardBox = (props) => {
         className="dashboardBox"
         style={{
           backgroundImage: `linear-gradient(to right, ${props.color?.[0]}, ${props.color?.[1]})`,
-        }}
-      >
+        }}>
         {props.grow === true ? (
           <span className="chart">
             {" "}

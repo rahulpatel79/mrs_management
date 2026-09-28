@@ -6,12 +6,13 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Pagination from '@mui/material/Pagination';
 import Select from "@mui/material/Select";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FaCircleUser } from "react-icons/fa6";
 import { HiShoppingCart } from "react-icons/hi";
 import { ImBin } from "react-icons/im";
 import { IoIosEye, IoMdTimer } from "react-icons/io";
 import { IoBagHandle, IoPencil, IoStarHalf } from "react-icons/io5";
+import { MyContext } from '../../App';
 import DashboardBox from "./components/DashboardBox";
 
 
@@ -23,6 +24,14 @@ function Dashboard() {
   const [showSearch, setShowSearch] = useState("");
   const open = Boolean(anchorEl);
   const ITEM_HEIGHT = 48;
+
+    const context = useContext(MyContext);
+  useEffect(() => {
+  
+    context.setIsHideSidebarAndHeader(false);
+    window.scrollTo(0, 0);
+  }, [context])
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -217,7 +226,7 @@ function Dashboard() {
                   <td>
                     <div className="d-flex align-items-center productBox">
                       <div className="imgWrapper">
-                        <div className="img">
+                        <div className="img p-1">
                           <img
                             src="https://mironcoder-hotash-react.netlify.app/images/product/01.webp"
                             alt="img"
@@ -260,7 +269,7 @@ function Dashboard() {
                   <td>
                     <div className="d-flex align-items-center productBox">
                       <div className="imgWrapper">
-                        <div className="img">
+                        <div className="img p-1">
                           <img
                             src="https://mironcoder-hotash-react.netlify.app/images/product/01.webp"
                             alt="img"
@@ -303,7 +312,7 @@ function Dashboard() {
                   <td>
                     <div className="d-flex align-items-center productBox">
                       <div className="imgWrapper">
-                        <div className="img">
+                        <div className="img p-1">
                           <img
                             src="https://mironcoder-hotash-react.netlify.app/images/product/01.webp"
                             alt="img"
@@ -346,7 +355,351 @@ function Dashboard() {
                   <td>
                     <div className="d-flex align-items-center productBox">
                       <div className="imgWrapper">
-                        <div className="img">
+                        <div className="img p-1">
+                          <img
+                            src="https://mironcoder-hotash-react.netlify.app/images/product/01.webp"
+                            alt="img"
+                            className="w-100"
+                          />
+                        </div>
+                      </div>
+                      <div className="info ps-0">
+                        <h6>Tops and skirt set for Female</h6>
+                        <p>
+                          Women's exclusive summer Tops and skirt set for Female
+                          Tops and skirt set
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>womans</td>
+                  <td>richman</td>
+                  <td style={{ width: "90px" }}>
+                    <del>$31.00</del> <br /> <span>$20</span>{" "}
+                  </td>
+                  <td>30</td>
+                  <td>4.9(16)</td>
+                  <td>380</td>
+                  <td>$38k</td>
+                  <td className="actions d-flex align-items-center  ">
+                    <Button className="secondary" color="secondary">
+                      <IoIosEye />{" "}
+                    </Button>
+                    <Button className="success" color="success">
+                      <IoPencil />
+                    </Button>
+                    <Button className="error" color="error">
+                      <ImBin />
+                    </Button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#1</td>
+                  <td>
+                    <div className="d-flex align-items-center productBox">
+                      <div className="imgWrapper">
+                        <div className="img p-1">
+                          <img
+                            src="https://mironcoder-hotash-react.netlify.app/images/product/01.webp"
+                            alt="img"
+                            className="w-100"
+                          />
+                        </div>
+                      </div>
+                      <div className="info ps-0">
+                        <h6>Tops and skirt set for Female</h6>
+                        <p>
+                          Women's exclusive summer Tops and skirt set for Female
+                          Tops and skirt set
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>womans</td>
+                  <td>richman</td>
+                  <td style={{ width: "90px" }}>
+                    <del>$31.00</del> <br /> <span>$20</span>{" "}
+                  </td>
+                  <td>30</td>
+                  <td>4.9(16)</td>
+                  <td>380</td>
+                  <td>$38k</td>
+                  <td className="actions d-flex align-items-center  ">
+                    <Button className="secondary" color="secondary">
+                      <IoIosEye />{" "}
+                    </Button>
+                    <Button className="success" color="success">
+                      <IoPencil />
+                    </Button>
+                    <Button className="error" color="error">
+                      <ImBin />
+                    </Button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#1</td>
+                  <td>
+                    <div className="d-flex align-items-center productBox">
+                      <div className="imgWrapper">
+                        <div className="img p-1">
+                          <img
+                            src="https://mironcoder-hotash-react.netlify.app/images/product/01.webp"
+                            alt="img"
+                            className="w-100"
+                          />
+                        </div>
+                      </div>
+                      <div className="info ps-0">
+                        <h6>Tops and skirt set for Female</h6>
+                        <p>
+                          Women's exclusive summer Tops and skirt set for Female
+                          Tops and skirt set
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>womans</td>
+                  <td>richman</td>
+                  <td style={{ width: "90px" }}>
+                    <del>$31.00</del> <br /> <span>$20</span>{" "}
+                  </td>
+                  <td>30</td>
+                  <td>4.9(16)</td>
+                  <td>380</td>
+                  <td>$38k</td>
+                  <td className="actions d-flex align-items-center  ">
+                    <Button className="secondary" color="secondary">
+                      <IoIosEye />{" "}
+                    </Button>
+                    <Button className="success" color="success">
+                      <IoPencil />
+                    </Button>
+                    <Button className="error" color="error">
+                      <ImBin />
+                    </Button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#1</td>
+                  <td>
+                    <div className="d-flex align-items-center productBox">
+                      <div className="imgWrapper">
+                        <div className="img p-1">
+                          <img
+                            src="https://mironcoder-hotash-react.netlify.app/images/product/01.webp"
+                            alt="img"
+                            className="w-100"
+                          />
+                        </div>
+                      </div>
+                      <div className="info ps-0">
+                        <h6>Tops and skirt set for Female</h6>
+                        <p>
+                          Women's exclusive summer Tops and skirt set for Female
+                          Tops and skirt set
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>womans</td>
+                  <td>richman</td>
+                  <td style={{ width: "90px" }}>
+                    <del>$31.00</del> <br /> <span>$20</span>{" "}
+                  </td>
+                  <td>30</td>
+                  <td>4.9(16)</td>
+                  <td>380</td>
+                  <td>$38k</td>
+                  <td className="actions d-flex align-items-center  ">
+                    <Button className="secondary" color="secondary">
+                      <IoIosEye />{" "}
+                    </Button>
+                    <Button className="success" color="success">
+                      <IoPencil />
+                    </Button>
+                    <Button className="error" color="error">
+                      <ImBin />
+                    </Button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#1</td>
+                  <td>
+                    <div className="d-flex align-items-center productBox">
+                      <div className="imgWrapper">
+                        <div className="img p-1">
+                          <img
+                            src="https://mironcoder-hotash-react.netlify.app/images/product/01.webp"
+                            alt="img"
+                            className="w-100"
+                          />
+                        </div>
+                      </div>
+                      <div className="info ps-0">
+                        <h6>Tops and skirt set for Female</h6>
+                        <p>
+                          Women's exclusive summer Tops and skirt set for Female
+                          Tops and skirt set
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>womans</td>
+                  <td>richman</td>
+                  <td style={{ width: "90px" }}>
+                    <del>$31.00</del> <br /> <span>$20</span>{" "}
+                  </td>
+                  <td>30</td>
+                  <td>4.9(16)</td>
+                  <td>380</td>
+                  <td>$38k</td>
+                  <td className="actions d-flex align-items-center  ">
+                    <Button className="secondary" color="secondary">
+                      <IoIosEye />{" "}
+                    </Button>
+                    <Button className="success" color="success">
+                      <IoPencil />
+                    </Button>
+                    <Button className="error" color="error">
+                      <ImBin />
+                    </Button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#1</td>
+                  <td>
+                    <div className="d-flex align-items-center productBox">
+                      <div className="imgWrapper">
+                        <div className="img p-1">
+                          <img
+                            src="https://mironcoder-hotash-react.netlify.app/images/product/01.webp"
+                            alt="img"
+                            className="w-100"
+                          />
+                        </div>
+                      </div>
+                      <div className="info ps-0">
+                        <h6>Tops and skirt set for Female</h6>
+                        <p>
+                          Women's exclusive summer Tops and skirt set for Female
+                          Tops and skirt set
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>womans</td>
+                  <td>richman</td>
+                  <td style={{ width: "90px" }}>
+                    <del>$31.00</del> <br /> <span>$20</span>{" "}
+                  </td>
+                  <td>30</td>
+                  <td>4.9(16)</td>
+                  <td>380</td>
+                  <td>$38k</td>
+                  <td className="actions d-flex align-items-center  ">
+                    <Button className="secondary" color="secondary">
+                      <IoIosEye />{" "}
+                    </Button>
+                    <Button className="success" color="success">
+                      <IoPencil />
+                    </Button>
+                    <Button className="error" color="error">
+                      <ImBin />
+                    </Button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#1</td>
+                  <td>
+                    <div className="d-flex align-items-center productBox">
+                      <div className="imgWrapper">
+                        <div className="img p-1">
+                          <img
+                            src="https://mironcoder-hotash-react.netlify.app/images/product/01.webp"
+                            alt="img"
+                            className="w-100"
+                          />
+                        </div>
+                      </div>
+                      <div className="info ps-0">
+                        <h6>Tops and skirt set for Female</h6>
+                        <p>
+                          Women's exclusive summer Tops and skirt set for Female
+                          Tops and skirt set
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>womans</td>
+                  <td>richman</td>
+                  <td style={{ width: "90px" }}>
+                    <del>$31.00</del> <br /> <span>$20</span>{" "}
+                  </td>
+                  <td>30</td>
+                  <td>4.9(16)</td>
+                  <td>380</td>
+                  <td>$38k</td>
+                  <td className="actions d-flex align-items-center  ">
+                    <Button className="secondary" color="secondary">
+                      <IoIosEye />{" "}
+                    </Button>
+                    <Button className="success" color="success">
+                      <IoPencil />
+                    </Button>
+                    <Button className="error" color="error">
+                      <ImBin />
+                    </Button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#1</td>
+                  <td>
+                    <div className="d-flex align-items-center productBox">
+                      <div className="imgWrapper">
+                        <div className="img p-1">
+                          <img
+                            src="https://mironcoder-hotash-react.netlify.app/images/product/01.webp"
+                            alt="img"
+                            className="w-100"
+                          />
+                        </div>
+                      </div>
+                      <div className="info ps-0">
+                        <h6>Tops and skirt set for Female</h6>
+                        <p>
+                          Women's exclusive summer Tops and skirt set for Female
+                          Tops and skirt set
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>womans</td>
+                  <td>richman</td>
+                  <td style={{ width: "90px" }}>
+                    <del>$31.00</del> <br /> <span>$20</span>{" "}
+                  </td>
+                  <td>30</td>
+                  <td>4.9(16)</td>
+                  <td>380</td>
+                  <td>$38k</td>
+                  <td className="actions d-flex align-items-center  ">
+                    <Button className="secondary" color="secondary">
+                      <IoIosEye />{" "}
+                    </Button>
+                    <Button className="success" color="success">
+                      <IoPencil />
+                    </Button>
+                    <Button className="error" color="error">
+                      <ImBin />
+                    </Button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#1</td>
+                  <td>
+                    <div className="d-flex align-items-center productBox">
+                      <div className="imgWrapper">
+                        <div className="img p-1">
                           <img
                             src="https://mironcoder-hotash-react.netlify.app/images/product/01.webp"
                             alt="img"

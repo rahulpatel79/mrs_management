@@ -67,7 +67,7 @@ function Index() {
             </div>
 
             <div className="col-sm-7 d-flex align-items-center part3 justify-content-end ">
-              <Button className="rounded-circle me-3">
+              <Button className="rounded-circle me-3" onClick={() => {context.setThemeMode(!context.themeMode)}} >
                 <CiLight />
               </Button>
 
@@ -329,8 +329,7 @@ function Index() {
                   Logout
                 </MenuItem>
               </Menu>
-          </div>
-              }
+          </div> }
                
               
             </div>

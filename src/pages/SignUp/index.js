@@ -22,6 +22,7 @@ const SignUp = () => {
 
   useEffect(() => {
     context.setIsHideSidebarAndHeader(true);
+     window.scrollTo(0, 0);
   });
   const focusInput = (index) => {
     setInputIndex(index);
@@ -62,7 +63,7 @@ const SignUp = () => {
                       className="form-control"
                       placeholder="enter your Name."
                       onFocus={() => focusInput(0)}
-                      onBlur={() => (setInputIndex) => null}
+                      onBlur={() => (setInputIndex) => null} autoFocus
                     />
                   </div>
 
